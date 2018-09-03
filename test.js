@@ -1,6 +1,4 @@
-var HumanHasher = require("./index.js")
-
-var hasher = new HumanHasher()
+var hasher = new (require("./index.js"))()
 
 console.log(hasher.humanize("0123456789abcdef"))
 
