@@ -43,18 +43,21 @@ var DEFAULT_WORDLIST = [
     'wisconsin', 'wolfram', 'wyoming', 'xray', 'yankee', 'yellow', 'zebra',
     'zulu']
 
-/**
- * Transforms hex digests to human-readable strings.
- *
- * The format of these strings will look something like:
- * `victor-bacon-zulu-lima`. The output is obtained by compressing the input
- * digest to a fixed number of bytes, then mapping those bytes to one of 256
- * words. A default wordlist is provided, but you can override this if you
- * prefer.
- * As long as you use the same wordlist, the output will be consistent (i.e.
- * the same digest will always render the same representation).
- */
+
 class HumanHasher {
+    /**
+     * Transforms hex digests to human-readable strings.
+     *
+     * The format of these strings will look something like:
+     * `victor-bacon-zulu-lima`. The output is obtained by compressing the input
+     * digest to a fixed number of bytes, then mapping those bytes to one of 256
+     * words. A default wordlist is provided, but you can override this if you
+     * prefer.
+     * As long as you use the same wordlist, the output will be consistent (i.e.
+     * the same digest will always render the same representation).
+     * 
+     * @param {Array} wordlist A list of exactly 256 words to choose from
+     */
     constructor(wordlist = DEFAULT_WORDLIST) {
         if(wordlist.length !== 256) throw new Error("Wordlist must have exactly 256 items")
         this.wordlist = wordlist

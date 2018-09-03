@@ -1,6 +1,6 @@
 {
   "name": "humanhash",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "human-readable hashes",
   "main": "index.js",
   "scripts": {
