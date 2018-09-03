@@ -91,7 +91,7 @@ class HumanHasher {
      */
     uuid(words = 4, seperator = '-', version = 4) {
         var uuid = ((version == 4) ? uuidv4() : uuidv1()).replace(new RegExp("-", 'g'), "")
-        return this.humanize(uuid, words, seperator)
+        return {humanhash: this.humanize(uuid, words, seperator), uuid: uuid}
     }
 
     /**
