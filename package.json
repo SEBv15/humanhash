@@ -1,0 +1,14 @@
+{
+  "name": "humanhash",
+  "version": "1.0.0",
+  "description": "human-readable hashes",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Sebastian Strempfer",
+  "license": "Unlicense",
+  "dependencies": {
+    "uuid": "^3.3.2"
+  }
+}
